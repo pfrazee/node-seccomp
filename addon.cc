@@ -18,6 +18,7 @@ void wrapError(const v8::FunctionCallbackInfo<v8::Value>& args) {
 void InitAll(v8::Local<v8::Object> exports) {
   NODE_DEFINE_CONSTANT(exports, SCMP_ACT_ALLOW);
   NODE_DEFINE_CONSTANT(exports, SCMP_ACT_KILL_PROCESS);
+  NODE_DEFINE_CONSTANT(exports, SCMP_ACT_LOG);
   NODE_SET_METHOD(exports, "SCMP_ACT_ERRNO", wrapError);
 
 #ifdef EACCES
