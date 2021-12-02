@@ -19,6 +19,7 @@ void InitAll(v8::Local<v8::Object> exports) {
   NODE_DEFINE_CONSTANT(exports, SCMP_ACT_ALLOW);
   NODE_DEFINE_CONSTANT(exports, SCMP_ACT_KILL_PROCESS);
   NODE_DEFINE_CONSTANT(exports, SCMP_ACT_LOG);
+  NODE_DEFINE_CONSTANT(exports, SCMP_ACT_TRAP);
   NODE_SET_METHOD(exports, "SCMP_ACT_ERRNO", wrapError);
 
 #ifdef EACCES
